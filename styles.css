@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("./assets/background-img.jpg");
+    background-size: cover;
+    /* background-color:aquamarine; */
+  }
+  
+  /* video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 100%;
+      max-height: 100%;
+      z-index:-100;
+    } */
+  
+  /* .categories {
+      margin-top: 50px;
+  } */
+  
+  .category-link {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      background-color: #3498db;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+
+  #alphabetHeading {
+    margin-top: 150px;
+  }
+  
+  #alphabetContainer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+  }
+  
+  .card {
+      padding: 20px;
+      margin: 10px;
+      width: 100px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+  
+  .card:hover {
+      background-color: #f0f0f0;
+      transform: translateY(-5px);
+  }
+  
+  .something {
+      height: 90vh;
+      /* padding-top: 25%; */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .popup-card {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      z-index: 100;
+      display: none;
+  }
+  
+  .popup-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 10px;
+  }
+  
+  .popup-card h2 {
+      margin-bottom: 10px;
+  }
+  
+  .popup-card p {
+      margin-bottom: 0;
+  }
+
+  #numberHeading {
+    margin-top: 150px;
+  }
+
+  button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+
+}
+
+.back-button {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #ccc;
+}
+
+#colorHeading {
+    margin-top: 150px;
+}
+
+.color-button {
+    width: 100px;
+    height: 100px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+}
+
+.color-name{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 0 0 5px 5px;
+    padding: 5px;
+}
+
+.color-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.color-card h2 {
+    margin-top: 0;
+}
+
+.color-card button {
+    margin-right: 10px;
+}
+
+
+
+.video-card {
+    width: 100%;
+    max-width: 560px;
+    margin-bottom: 20px;
+}
+
+.video-card iframe {
+    width: 100%;
+    height: auto;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#videoHeading {
+    margin-top: 150px;
+}
+
+.video-frame {
+    width: 100%;
+    height: auto;
+}
+
+.video-list-item {
+    list-style: none;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-list-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0f0f0;
+
+}
+
+.video-list-item a {
+    text-decoration: none;
+    color: #333;
+}
+
+.video-list-item a:hover {
+    color: #007bff;
+}
