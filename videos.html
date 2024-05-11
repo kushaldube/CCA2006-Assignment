@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <h1 id="videoHeading">Nursery Rhymes</h1>
+    <ul id="videoList" class="container d-flex justify-content-center flex-wrap">
+            <!-- Video list items will be dynamically added here -->
+    </ul>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <button id="close-button" class="close-button">&times;</button>
+            <iframe id="video-frame" width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

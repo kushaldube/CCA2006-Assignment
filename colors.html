@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="colorHeading">Colors</h1>
+    <div id="colorContainer" class="container d-flex justify-content-center flex-wrap">
+        <!-- Color cards will be dynamically added here -->
+    </div>
+    <a href="index.html" class="back-button">Back to Home</a>
+    <script>
+        function createColorCard(colorName, colorCode) {
+            const colorCard = document.createElement("div");
+            colorCard.classList.add("color-card");
+            colorCard.style.backgroundColor = colorCode;
+
+            const colorTitle = document.createElement("h2");
+            colorTitle.textContent = colorName;
+
+            const closeButton = document.createElement("button");
+            closeButton.textContent = "Close";
+            closeButton.addEventListener("click", () => {
+                colorCard.remove();
+            });
+
+            const speakButton = document.createElement("button");
+            speakButton.textContent = "Speak";
+            speakButton.addEventListener("click", () => {
+                speakText(colorName);
+            });
+
+            colorCard.appendChild(colorTitle);
+            colorCard.appendChild(speakButton);
+            colorCard.appendChild(closeButton);
+
+            return colorCard;
+        }
+
+        function speakText(text) {
+            if ('speechSynthesis' in window) {
+                const synth = window.speechSynthesis;
+                const utterance = new SpeechSynthesisUtterance(text);
+                synth.speak(utterance);
+            } else {
+                alert("Text-to-speech is not supported in your browser.");
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const colorContainer = document.getElementById("colorContainer");
+
+            const colors = [
+                { name: "Red", code: "#FF0000" },
+                { name: "Green", code: "#008000" },
+                { name: "Blue", code: "#0000FF" },
+                { name: "Yellow", code: "#FFFF00" },
+                { name: "Pink", code: "#FFC0CB" },
+                { name: "Purple", code: "#800080" },
+                { name: "Orange", code: "#FFA500" },
+                { name: "Brown", code: "#A52A2A" },
+                { name: "Gray", code: "#808080" },
+                { name: "Black", code: "#000000" },
+                { name: "White", code: "#FFFFFF" },
+            ];
+
+            colors.forEach((color) => {
+                const colorButton = document.createElement("button");
+                colorButton.classList.add("color-button");
+                colorButton.style.backgroundColor = color.code;
+
+                const colorName = document.createElement("p");
+                colorName.textContent = color.name;
+                colorName.classList.add("color-name");
+
+                colorButton.appendChild(colorName);
+
+                colorButton.addEventListener("click", () => {
+                    const colorCard = createColorCard(color.name, color.code);
+                    colorContainer.appendChild(colorCard);
+                });
+
+                document.body.appendChild(colorButton);
+            });
+        });
+    </script>
+</body>
+</html>
